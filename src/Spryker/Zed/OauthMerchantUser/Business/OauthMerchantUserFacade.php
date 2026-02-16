@@ -13,8 +13,6 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
  * @method \Spryker\Zed\OauthMerchantUser\Business\OauthMerchantUserBusinessFactory getFactory()
- * @method \Spryker\Zed\OauthMerchantUser\Persistence\OauthMerchantUserRepositoryInterface getRepository()
- * @method \Spryker\Zed\OauthMerchantUser\Persistence\OauthMerchantUserEntityManagerInterface getEntityManager()
  */
 class OauthMerchantUserFacade extends AbstractFacade implements OauthMerchantUserFacadeInterface
 {
