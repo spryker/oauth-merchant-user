@@ -250,7 +250,7 @@ class AuthorizeByMerchantUserScopeTest extends Unit
     protected function createOauthMerchantUserBusinessFactoryMock(): OauthMerchantUserBusinessFactory
     {
         return $this->getMockBuilder(OauthMerchantUserBusinessFactory::class)
-            ->enableProxyingToOriginalMethods()
+            ->onlyMethods([])
             ->getMock();
     }
 
