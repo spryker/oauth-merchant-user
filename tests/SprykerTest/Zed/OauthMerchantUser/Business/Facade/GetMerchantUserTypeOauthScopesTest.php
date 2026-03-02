@@ -51,9 +51,6 @@ class GetMerchantUserTypeOauthScopesTest extends Unit
      */
     protected OauthMerchantUserTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldReturnConfiguratedMerchantUserScopes(): void
     {
         // Arrange
@@ -67,9 +64,6 @@ class GetMerchantUserTypeOauthScopesTest extends Unit
         $this->assertSame($oauthScopeTransfers[0]->getIdentifier(), static::SCOPE_MERCHANT_USER);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotReturnWarehouseUserScopesWhileUserIsUnknown(): void
     {
         // Arrange
@@ -82,9 +76,6 @@ class GetMerchantUserTypeOauthScopesTest extends Unit
         $this->assertEmpty($oauthScopeTransfers);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantUserTransfer
-     */
     protected function createMerchantUser(): MerchantUserTransfer
     {
         $merchantTransfer = $this->tester->haveMerchant([MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED]);

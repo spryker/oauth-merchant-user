@@ -20,9 +20,6 @@ use Spryker\Zed\OauthMerchantUser\OauthMerchantUserDependencyProvider;
  */
 class OauthMerchantUserBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\OauthMerchantUser\Business\Provider\MerchantUserTypeOauthScopeProviderInterface
-     */
     public function createMerchantUserTypeOauthScopeProvider(): MerchantUserTypeOauthScopeProviderInterface
     {
         return new MerchantUserTypeOauthScopeProvider(
@@ -31,9 +28,6 @@ class OauthMerchantUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\OauthMerchantUser\Business\Checker\MerchantUserTypeOauthScopeAuthorizationCheckerInterface
-     */
     public function createMerchantUserTypeOauthScopeAuthorizationChecker(): MerchantUserTypeOauthScopeAuthorizationCheckerInterface
     {
         return new MerchantUserTypeOauthScopeAuthorizationChecker(
@@ -41,9 +35,6 @@ class OauthMerchantUserBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\OauthMerchantUser\Dependency\Facade\OauthMerchantUserToMerchantUserFacadeInterface
-     */
     public function getMerchantUserFacade(): OauthMerchantUserToMerchantUserFacadeInterface
     {
         return $this->getProvidedDependency(OauthMerchantUserDependencyProvider::FACADE_MERCHANT_USER);

@@ -42,19 +42,11 @@ class MerchantUserTypeOauthScopeAuthorizationChecker implements MerchantUserType
      */
     protected OauthMerchantUserConfig $oauthMerchantUserConfig;
 
-    /**
-     * @param \Spryker\Zed\OauthMerchantUser\OauthMerchantUserConfig $oauthMerchantUserConfig
-     */
     public function __construct(OauthMerchantUserConfig $oauthMerchantUserConfig)
     {
         $this->oauthMerchantUserConfig = $oauthMerchantUserConfig;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AuthorizationRequestTransfer $authorizationRequestTransfer
-     *
-     * @return bool
-     */
     public function authorize(AuthorizationRequestTransfer $authorizationRequestTransfer): bool
     {
         $requestData = $authorizationRequestTransfer->getEntityOrFail()->getData();
@@ -79,12 +71,6 @@ class MerchantUserTypeOauthScopeAuthorizationChecker implements MerchantUserType
         return !empty($requestData[static::GLUE_REQUEST_USER]) && isset($requestData[static::METHOD], $requestData[static::PATH]);
     }
 
-    /**
-     * @param string $path
-     * @param string $method
-     *
-     * @return bool
-     */
     protected function isPathAllowed(string $path, string $method): bool
     {
         $allowedPaths = $this->oauthMerchantUserConfig->getAllowedForMerchantUserPaths();

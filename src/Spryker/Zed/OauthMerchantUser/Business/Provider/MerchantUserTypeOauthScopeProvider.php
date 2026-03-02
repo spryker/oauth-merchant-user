@@ -25,10 +25,6 @@ class MerchantUserTypeOauthScopeProvider implements MerchantUserTypeOauthScopePr
      */
     protected OauthMerchantUserConfig $oauthMerchantUserConfig;
 
-    /**
-     * @param \Spryker\Zed\OauthMerchantUser\Dependency\Facade\OauthMerchantUserToMerchantUserFacadeInterface $merchantUserFacade
-     * @param \Spryker\Zed\OauthMerchantUser\OauthMerchantUserConfig $oauthMerchantUserConfig
-     */
     public function __construct(
         OauthMerchantUserToMerchantUserFacadeInterface $merchantUserFacade,
         OauthMerchantUserConfig $oauthMerchantUserConfig
@@ -56,9 +52,6 @@ class MerchantUserTypeOauthScopeProvider implements MerchantUserTypeOauthScopePr
         ];
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\OauthScopeTransfer
-     */
     protected function createMerchantUserOauthScopeTransfer(): OauthScopeTransfer
     {
         return (new OauthScopeTransfer())
